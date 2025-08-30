@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RideMitra - Har Ride ka Dost</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fb;
+      color: #222;
+      text-align: center;
+    }
+    header {
+      background-color: #1e3a8a; /* Deep blue */
+      color: #fff;
+      padding: 20px;
+    }
+    header img {
+      height: 60px;
+    }
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 28px;
+    }
+    header p {
+      font-size: 16px;
+      margin: 0;
+      color: #dbeafe; /* Light blue */
+    }
+    nav {
+      margin: 20px 0;
+    }
+    nav button {
+      background-color: #f97316; /* Orange accent */
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      margin: 8px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav button:hover {
+      background-color: #ea580c;
+    }
+    section {
+      display: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+      background: #1e3a8a;
+      color: white;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    a {
+      color: #f97316;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="YOUR_LOGO_URL_HERE" alt="RideMitra Logo" />
+    <h1>RideMitra</h1>
+    <p>Har Ride ka Dost 🚗</p>
+  </header>
+
+  <nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('services')">Services</button>
+    <button onclick="showPage('booking')">Book Now</button>
+    <button onclick="showPage('about')">About Us</button>
+    <button onclick="showPage('contact')">Contact</button>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Welcome to RideMitra</h2>
+    <p>Your trusted friend for car service, repair, and spares in Indore.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul style="list-style:none; padding:0;">
+      <li>✔ Car General Service</li>
+      <li>✔ Engine & Brake Check</li>
+      <li>✔ Denting & Painting</li>
+      <li>✔ Genuine Spare Parts</li>
+    </ul>
+  </section>
+
+  <section id="booking">
+    <h2>Book Your Service</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required style="padding:8px; width:80%; margin:6px;"><br>
+      <input type="text" placeholder="Car Model" required style="padding:8px; width:80%; margin:6px;"><br>
+      <input type="text" placeholder="Problem / Service Needed" required style="padding:8px; width:80%; margin:6px;"><br>
+      <button type="submit" style="background:#1e3a8a; color:white; padding:10px 20px; border:none; border-radius:6px;">Submit</button>
+    </form>
+  </section>
+
+  <section id="about">
+    <h2>About RideMitra</h2>
+    <p>RideMitra is your car’s best friend. We provide reliable car services, repairs, and genuine spares with the trust of a true Mitra.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 Call/WhatsApp: <a href="tel:+916265641648">+91 62656 41648</a></p>
+    <p>📍 Indore, Madhya Pradesh</p>
+  </section>
+
+  <footer>
+    <p>© 2025 RideMitra | Har Ride ka Dost 🚗</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(pageId).classList.add("active");
+    }
+  </script>
+</body>
+</html>
